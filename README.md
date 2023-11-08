@@ -42,7 +42,7 @@ Bridge the two metal circles on the top right before connect the CJMCU to the US
 Once connected, run in esptool:
 
 ```
-python esptool.py --trace   --baud 150200 --port /dev/ttyACM0 write_flash 0x00000 ../esp8266_wifi_duck.ino.generic.bin --flash_size 4MB --flash_mode dio --flash_freq 40m
+python esptool.py --trace --before no_reset --baud 115200 --port /dev/ttyACM0 write_flash 0x00000 ../esp8266_wifi_duck.ino.generic.bin --flash_size 4MB --flash_mode dio --flash_freq 40m
 ```
 
 Now, disconnect the bridge.
